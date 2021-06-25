@@ -15,9 +15,9 @@ import (
 func getTokenId(w http.ResponseWriter, r *http.Request) {
 	//Lets make an Http Post Request to jtb
 	postBody, _ := json.Marshal(map[string]string{
-		"email":      "info@totagotech.com",
-		"password":   "Unlock*2021@",
-		"clientname": "jtb",
+		"email":      "email@email.com",
+		"password":   "password",
+		"clientname": "name",
 	})
 	responseBody := bytes.NewBuffer(postBody)
 	resp, err := http.Post("https://api.jtb.gov.ng:2089/api/GetTokenID", "application/json", responseBody)
