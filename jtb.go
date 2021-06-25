@@ -101,7 +101,7 @@ func handleRequests() {
 
 	corsObj := handlers.AllowedOrigins([]string{"*"})
 
-	log.Fatal(http.ListenAndServe(":5001", handlers.CORS(corsObj)(router)))
+	log.Fatal(http.ListenAndServe(":5000", handlers.CORS(corsObj)(router)))
 }
 
 func main() {
